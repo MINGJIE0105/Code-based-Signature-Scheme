@@ -160,8 +160,7 @@ public class Signing {
 
       // Set the path for the randomly chosen Generator Matrix and Parity-checking Matrix
       targetGenerator = (randomMatrixToBeUsed == 0) ? String.format("%s/G.csv", pathOfGenerator) : String.format("%s/G%d.csv", pathOfGenerator, randomMatrixToBeUsed);
-      // targetChecking = (randomMatrixToBeUsed == 0) ? String.format("%s/H.csv", pathOfChecking) : String.format("%s/H%d.csv", pathOfChecking, randomMatrixToBeUsed);
-      targetChecking = String.format("%s/H.csv", pathOfChecking);
+      targetChecking = (randomMatrixToBeUsed == 0) ? String.format("%s/H.csv", pathOfChecking) : String.format("%s/H%d.csv", pathOfChecking, randomMatrixToBeUsed);
 
         System.out.println("\t>>>> 1. Loading Generator Matrix and Parity-checking Matrix");
         System.out.println(String.format("\t>>>> Loading Generator Matrix from %s", targetGenerator));
